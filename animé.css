@@ -4,6 +4,10 @@ body{
 .mySlides{display: none;}
 img{vertical-align: middle;}
 
+p{
+  text-align: center;
+  font-size: larger;
+}
 
 li{
   float: right;
