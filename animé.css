@@ -4,10 +4,6 @@ body{
 .mySlides{display: none;}
 img{vertical-align: middle;}
 
-p{
-  text-align: center;
-  font-size: larger;
-}
 
 li{
   float: right;
@@ -17,23 +13,9 @@ li{
 background-color: lightgray;
 color: lightgray;
 }
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li a:hover{
-  background-color: #5a5858;
-  border-radius: 8px;
-}
 
-a {
-  display: block;
-  padding: 8px;
-  background-color: transparent;
-}
+
+
 ul{
   list-style-type: none;
   margin: 0;
@@ -139,13 +121,16 @@ margin-top: 5%;
   width: 16.665%;
   padding: 5px;
   cursor: pointer;
+  z-index: 9;
 }
 .row::after{
   content: "";
   clear: both;
   display: table;
 }
-
+#lien-image{
+  z-index: 10;
+}
 .A{
   font-family: 'Rubik', sans-serif;
   color: white;
@@ -153,17 +138,20 @@ margin-top: 5%;
 }
 /**********/
 body{
-margin: 0% 0%;
-padding: 0% 0%;
-box-sizing: border-box;
-font-family: 'Advent Pro', sans-serif;
+  margin: 0% 0%;
+  padding: 0% 0%;
+  box-sizing: border-box;
+  font-family: 'Advent Pro', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
 
 html {
 scroll-behavior: smooth;
 }
-
+#nnav{
+  z-index: 9;
+  padding: 0.01px 0;
+}
 
 ul {
 margin: 0;
@@ -185,80 +173,80 @@ color: black;
 }
 /* ******************* NAVBAR ******************* */
 .nav {
-overflow: hidden;
-position: fixed;
-width: 100%;
-opacity: 0.9;
-background-color: #333131; 
-z-index: 7; 
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #333131;  
 }
-.header ul {
-list-style-type: none;
+header ul {
+  list-style-type: none;
 }
-.header li {
-float: left;
+header li {
+  float: left;
 }
-.header li a {
-text-decoration: none;
-display: block;
-padding: 18px 40px;
-margin-bottom: 6.5%;
-color: #ffffff ;
-font-family: sans-serif;
-font-size: 160%;
-}
-#title h1{
-text-align: center;
-font-size: 3em;
-}
-#title{
-text-align: center;
-margin-bottom: 8.5%;
+header li a {
+  text-decoration: none;
+  display: block;
+  padding: 18px 40px;
+  margin-bottom: 6.5%;
+  color: white ;
+  font-family: sans-serif;
+  font-size: 160%;
+  
 
-}
-.sous-titre li a{
-text-decoration: none;
-display: block;
-padding: 18px 40px;
-margin-bottom: 6.5%;
-color: #000000 ;
-font-family: sans-serif;
-font-size: 160%;
-position: absolute;
-}
-#vf{
-right: 72%;
-}
-#vostfr{
-right: 45.5%;
-
-}
-#plan{
-right: 21%;
-}
-.sous-titre{
-text-align: center;
-}
+ }
 #logo {
-font-weight: bold;
-float: left;
-margin-left: 2.6%;
-margin-top: 0.1%;
-margin-right: 4%;
+  font-weight: bold;
+  float: left;
+  margin-left: 2.6%;
+  margin-top: 0.5%;
+  margin-right: 4%;
 }
 
 .ul1 li a:hover {
-background-color: #5a5a5a;
-color: #fff;
+  background-color: #5a5a5a;
+  color: #fff;
 }
+#title h1{
+  text-align: center;
+  font-size: 3em;
+  }
+  #title{
+  text-align: center;
+  margin-bottom: 8.5%;
+  
+  }
+  .sous-titre li a{
+  text-decoration: none;
+  display: block;
+  padding: 18px 40px;
+  margin-bottom: 6.5%;
+  color: #000000 ;
+  font-family: sans-serif;
+  font-size: 160%;
+  position: absolute;
+  }
+  #vf{
+  right: 72%;
+  }
+  #vostfr{
+  right: 45.5%;
+  
+  }
+  #plan{
+  right: 21%;
+  }
+  .sous-titre{
+  text-align: center;
+  }
 
-
-
+.nav-droite{
+padding-top: 0.8%;
+}
 /* ******************* NAVBAR-burger ******************* */
 .header__logo img {
 max-height: 50px;
-z-index: 7; 
-
 }
 
 
@@ -267,7 +255,6 @@ padding: 0;
 margin: 0;
 list-style: none;
 display: flex;
-z-index: 7; 
 
 }
 
@@ -284,6 +271,7 @@ font-size: 15px;
 color: #fff;
 margin-left: 41%;
 font-size: 15px;
+padding: 0 0 ;  
 }
 .header__nav__menu__link h4 {
 color: #fff;
@@ -293,6 +281,7 @@ font-size: 15px;
 
 .sous_titre{
 display: block;
+z-index: 9;
 }
 
 .img_sous_texte{
@@ -313,7 +302,7 @@ top: 27.2%;
 margin-right: initial;
 }
 
-.header__nav__menu__link a {
+.titre-nav {
 color: #fff;
 font-family: 'Arial';
 font-weight: 850;
@@ -350,7 +339,7 @@ float: right;
 right: 35px;
 top: 12px;
 position: absolute;
-z-index: 7; 
+z-index: 0;
 position: fixed;
 
 }
@@ -362,88 +351,87 @@ display: none;
 @media screen and (max-width: 10500px) {
 
 .header__burger {
-  display: block;
-  cursor: pointer;
+    display: block;
+    cursor: pointer;
 }
 
 
 .header__nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100vh;
-  background-color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-  z-index: 8;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
 
 }
 
 .header__nav.open {
-  display: flex;
-  animation: transformMenu 300ms ease-in-out forwards;
+    display: flex;
+    animation: transformMenu 300ms ease-in-out forwards;
 }
 
 @keyframes transformMenu {
-  0% {
-      transform: translateX(100%);
-  }
+    0% {
+        transform: translateX(100%);
+    }
 
-  100% {
-      transform: initial;
-  }
+    100% {
+        transform: initial;
+    }
 }
 
 .header__nav__menu {
-  flex-direction: column;
-  align-items: flex-start;
-  padding-right: 15%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 15%;
 }
 
 .header__nav__menu__link {
-  margin-right: 0;
-  margin-bottom: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 
-.header__nav__menu__link a {
-  font-size: 40px;
-  left: 8%;
+.titre-nav {
+    font-size: 40px;
+    left: 8%;
 }
 
 .header__nav__close {
-  display: block;
-  cursor: pointer;
-  
+    display: block;
+    cursor: pointer;
+    
 }
 
 .header__nav__close svg {
-  stroke: #fff;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: 16px;
-  right: 16px;
+    stroke: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
 }
 
 .overlay-menu-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.6);
-  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
 }
 
 .overlay-menu-mobile.open {
-  display: block;
+    display: block;
 }
 
 }
-
 /* **************** IMAGE PRINCIPALE ************* */
 #imagePrincipale {
 padding-top: 60px;
